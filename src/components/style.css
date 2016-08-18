@@ -1,0 +1,17 @@
+
+.side {
+  overflow: scroll;
+  height: 100%;
+}
+
+.txt {
+  margin: 20px;
+  text-align: center;
+  color: darkred;
+
+}
+
+.ex {
+  float: right;
+   margin: 10px;
+}
