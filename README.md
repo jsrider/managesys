@@ -1,26 +1,10 @@
 # antd-demo
 
-## Environment
 
-```
-node >= 4
-```
+基于antd脚手架的一个后台管理系统（前端实现）
 
-## Code Style
+dist是构建目录 可以本地运行
 
-https://github.com/airbnb/javascript
+跑源码需要安装npm环境
+待更新。。
 
-## Develop
-
-```
-npm run dev
-```
-
-访问 http://127.0.0.1:8989
-
-## Build
-
-```
-npm run build
-```
-# managesys

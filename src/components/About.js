@@ -1,7 +1,7 @@
 /**
  * Created by xu on 16/8/14.
  */
-
+import { Link } from 'react-router'
 import React from 'react';
 import { Table } from 'antd';
 import { DatePicker } from 'antd';
@@ -13,107 +13,1021 @@ function onChange(value, dateString) {
 }
 
 //表格数据
-// 事例表中第四行合并了五列，除了第一列设置 colSpan = 5 外
-// 其他列的第四行 colSpan = 0 (被合并掉，不会渲染)
-const renderContent = function (value, row, index) {
-  const obj = {
-    children: value,
-    props: {},
-  };
-  if (index === 4) {
-    obj.props.colSpan = 0;
-  }
-  return obj;
-};
+var tt = React.createElement('div',null,
+  React.createElement('div',{className:'div-tt'},'时'),
+  React.createElement('div',{className:'div-tt'},'间')
+
+)
+var t1 = React.createElement('div',{className:'div-outer'},
+React.createElement('div',{className:'div-up'},'一'),
+  React.createElement('div',{className:'div-cont'},
+  React.createElement('div',{className:'div-down'},'温度'),
+  React.createElement('div',{className:'div-down'},'压力'),
+  React.createElement('div',{className:'div-down'},'流量'),
+  React.createElement('div',{className:'div-down'},'累积'),
+  React.createElement('div',{className:'div-down'},'气量'),)
+)
+var t2 = React.createElement('div',{className:'div-outer'},
+  React.createElement('div',{className:'div-up'},'二'),
+  React.createElement('div',{className:'div-cont'},
+    React.createElement('div',{className:'div-down'},'温度'),
+    React.createElement('div',{className:'div-down'},'压力'),
+    React.createElement('div',{className:'div-down'},'流量'),
+    React.createElement('div',{className:'div-down'},'累积'),
+    React.createElement('div',{className:'div-down'},'气量'),)
+)
+var t3 = React.createElement('div',{className:'div-outer'},
+  React.createElement('div',{className:'div-up'},'三'),
+  React.createElement('div',{className:'div-cont'},
+    React.createElement('div',{className:'div-down'},'温度'),
+    React.createElement('div',{className:'div-down'},'压力'),
+    React.createElement('div',{className:'div-down'},'流量'),
+    React.createElement('div',{className:'div-down'},'累积'),
+    React.createElement('div',{className:'div-down'},'气量'),)
+)
+var t4 = React.createElement('div',{className:'div-outer'},
+  React.createElement('div',{className:'div-up'},'四'),
+  React.createElement('div',{className:'div-cont'},
+    React.createElement('div',{className:'div-down'},'温度'),
+    React.createElement('div',{className:'div-down'},'压力'),
+    React.createElement('div',{className:'div-down'},'流量'),
+    React.createElement('div',{className:'div-down'},'累积'),
+    React.createElement('div',{className:'div-down'},'气量'),)
+)
+var t5 = React.createElement('div',{className:'div-outer'},
+  React.createElement('div',{className:'div-up'},'五'),
+  React.createElement('div',{className:'div-cont'},
+    React.createElement('div',{className:'div-down'},'温度'),
+    React.createElement('div',{className:'div-down'},'压力'),
+    React.createElement('div',{className:'div-down'},'流量'),
+    React.createElement('div',{className:'div-down'},'累积'),
+    React.createElement('div',{className:'div-down'},'气量'),)
+)
+var t6 = React.createElement('div',{className:'div-outer'},
+  React.createElement('div',{className:'div-up'},'六'),
+  React.createElement('div',{className:'div-cont'},
+    React.createElement('div',{className:'div-down'},'温度'),
+    React.createElement('div',{className:'div-down'},'压力'),
+    React.createElement('div',{className:'div-down'},'流量'),
+    React.createElement('div',{className:'div-down'},'累积'),
+    React.createElement('div',{className:'div-down'},'气量'),)
+)
 
 const columns = [{
-  title: '姓名',
+  title: tt,
   dataIndex: 'name',
-  render(text, row, index) {
-    if (index < 4) {
-      return <a href="#">{text}</a>;
-    }
-    return {
-      children: <a href="#">{text}</a>,
-      props: {
-        colSpan: 3,
-      },
-    };
-  },
-}, {
-  title: '年龄',
-  dataIndex: 'age',
-  render: renderContent,
-}, {
-  title: '家庭电话',
-  colSpan: 2,
-  dataIndex: 'tel',
-  render(value, row, index) {
-    const obj = {
-      children: value,
-      props: {},
-    };
-    // 第三列的第三行行合并
-    if (index === 2) {
-      obj.props.rowSpan = 2;
-    }
+  fixed: 'left',
+  width: 100
 
-    // 第三列的第四行被合并没了，设置 rowSpan = 0 直接不用渲染
-    if (index === 3) {
-      obj.props.rowSpan = 0;
-    }
-
-    if (index === 4) {
-      obj.props.colSpan = 0;
-    }
-    return obj;
-  },
 }, {
-  title: '手机号',
+  title: t1,
+  colSpan: 5,
+  dataIndex: 'd1',
+  width: 50
+
+}, {
   colSpan: 0,
-  dataIndex: 'phone',
-  render: renderContent,
+  dataIndex: 'd2',
+
+
 }, {
-  title: '住址',
-  dataIndex: 'address',
-  render: renderContent,
+  colSpan: 0,
+  dataIndex: 'd3',
+  width: 45
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd4',
+  width: 45
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd5',
+  width: 47
+
+}, {
+  title: t2,
+  colSpan: 5,
+  dataIndex: 'd6',
+  width: 50
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd7',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd8',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd9',
+  width: 45
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd10',
+
+}, {
+  title: t3,
+  colSpan: 5,
+  dataIndex: 'd11',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd12',
+  width: 48
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd13',
+  width: 47
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd14',
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd15',
+
+
+}, {
+  title: t4,
+  colSpan: 5,
+  dataIndex: 'd16',
+  width: 50
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd17',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd18',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd19',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd20',
+
+
+}, {
+  title: t5,
+  colSpan: 5,
+  dataIndex: 'd21',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd22',
+  width: 50
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd23',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd24',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd25',
+
+
+}, {
+  title: t6,
+  colSpan: 5,
+  dataIndex: 'd26',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd27',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd28',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd29',
+
+
+}, {
+  colSpan: 0,
+  dataIndex: 'd30',
+
+
 }];
 
 const data = [{
   key: '1',
-  name: '胡彦斌',
-  age: 32,
-  tel: '0571-22098909',
-  phone: 18889898989,
-  address: '西湖区湖底公园1号',
+  name: '0:00',
+  d1: '11',
+  d2: '22',
+  d3: '33',
+  d4: '44',
+  d5: '55',
+  d6: '11',
+  d7: '22',
+  d8: '33',
+  d9: '44',
+  d10: '55',
+  d11: '11',
+  d12: '22',
+  d13: '33',
+  d14: '44',
+  d15: '55',
+  d16: '11',
+  d17: '22',
+  d18: '33',
+  d19: '44',
+  d20: '55',
+  d21: '11',
+  d22: '22',
+  d23: '33',
+  d24: '44',
+  d25: '55',
+  d26: '11',
+  d27: '22',
+  d28: '33',
+  d29: '44',
+  d30: '55'
 }, {
   key: '2',
-  name: '胡彦祖',
-  tel: '0571-22098333',
-  phone: 18889898888,
-  age: 42,
-  address: '西湖区湖底公园1号',
+  name: '1:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+
 }, {
   key: '3',
-  name: '李大嘴',
-  age: 32,
-  tel: '0575-22098909',
-  phone: 18900010002,
-  address: '西湖区湖底公园1号',
+  name: '2:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
 }, {
   key: '4',
-  name: '李夫人',
-  age: 18,
-  tel: '0575-22098909',
-  phone: 18900010002,
-  address: '西湖区湖底公园1号',
+  name: '3:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
 }, {
   key: '5',
-  name: '习大大',
-  age: 18,
-  tel: '0575-22098909',
-  phone: 18900010002,
-  address: '西湖区湖底公园1号',
+  name: '4:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '6',
+  name: '5:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '7',
+  name: '6:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '8',
+  name: '7:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '9',
+  name: '8:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '10',
+  name: '9:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '11',
+  name: '10:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '12',
+  name: '11:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '13',
+  name: '12:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '14',
+  name: '13:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '15',
+  name: '14:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '16',
+  name: '15:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '17',
+  name: '16:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '18',
+  name: '17:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '19',
+  name: '18:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '20',
+  name: '19:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '21',
+  name: '20:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '22',
+  name: '21:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '23',
+  name: '22:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
+}, {
+  key: '24',
+  name: '23:00',
+  d1: '20',
+  d2: '100',
+  d3: '50',
+  d4: '50',
+  d5: '50',
+  d6: '20',
+  d7: '100',
+  d8: '555',
+  d9: '11',
+  d10: '555',
+  d11: '555',
+  d12: '555',
+  d13: '555',
+  d14: '555',
+  d15: '555',
+  d16: '555',
+  d17: '555',
+  d18: '555',
+  d19: '555',
+  d20: '555',
+  d21: '555',
+  d22: '555',
+  d23: '555',
+  d24: '555',
+  d25: '555',
+  d26: '555',
+  d27: '555',
+  d28: '555',
+  d29: '555',
+  d30: '678'
 }];
 
 
@@ -123,14 +1037,20 @@ export default React.createClass({
 
     <div>
       <div>
+
         <DatePicker onChange={onChange} />
         <Button type="ghost" icon="search">查询</Button>
+        <Button type="primary" size="large" className="ex"><Link to="/repos">曲线</Link></Button>
+        <Button type="primary" size="large" className="ex">打印</Button>
         <Button type="primary" size="large" className="ex">导出Excel</Button>
+
       </div>
-      <h1 className="txt">2016年08月13日二矿产量日报</h1>
+      <br />
+
+      <h1 className="txt">总览日报表</h1>
 
 
-      <Table columns={columns} dataSource={data} bordered />
+      <Table columns={columns} dataSource={data} pagination={false} scroll={{ x: 1500, y: 400 }} bordered />
 
     </div>
 
